@@ -1,0 +1,2608 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateApp(
+  $input: CreateAppInput!
+  $condition: ModelAppConditionInput
+) {
+  createApp(input: $input, condition: $condition) {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateApp(
+  $input: UpdateAppInput!
+  $condition: ModelAppConditionInput
+) {
+  updateApp(input: $input, condition: $condition) {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteApp(
+  $input: DeleteAppInput!
+  $condition: ModelAppConditionInput
+) {
+  deleteApp(input: $input, condition: $condition) {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateShop(
+  $input: CreateShopInput!
+  $condition: ModelShopConditionInput
+) {
+  createShop(input: $input, condition: $condition) {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateShop(
+  $input: UpdateShopInput!
+  $condition: ModelShopConditionInput
+) {
+  updateShop(input: $input, condition: $condition) {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteShop(
+  $input: DeleteShopInput!
+  $condition: ModelShopConditionInput
+) {
+  deleteShop(input: $input, condition: $condition) {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppointment(
+  $input: CreateAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  createAppointment(input: $input, condition: $condition) {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppointment(
+  $input: UpdateAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  updateAppointment(input: $input, condition: $condition) {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppointment(
+  $input: DeleteAppointmentInput!
+  $condition: ModelAppointmentConditionInput
+) {
+  deleteAppointment(input: $input, condition: $condition) {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBranch(
+  $input: CreateBranchInput!
+  $condition: ModelBranchConditionInput
+) {
+  createBranch(input: $input, condition: $condition) {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBranch(
+  $input: UpdateBranchInput!
+  $condition: ModelBranchConditionInput
+) {
+  updateBranch(input: $input, condition: $condition) {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBranch(
+  $input: DeleteBranchInput!
+  $condition: ModelBranchConditionInput
+) {
+  deleteBranch(input: $input, condition: $condition) {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateService(
+  $input: CreateServiceInput!
+  $condition: ModelServiceConditionInput
+) {
+  createService(input: $input, condition: $condition) {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateService(
+  $input: UpdateServiceInput!
+  $condition: ModelServiceConditionInput
+) {
+  updateService(input: $input, condition: $condition) {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteService(
+  $input: DeleteServiceInput!
+  $condition: ModelServiceConditionInput
+) {
+  deleteService(input: $input, condition: $condition) {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppUsers(
+  $input: CreateAppUsersInput!
+  $condition: ModelAppUsersConditionInput
+) {
+  createAppUsers(input: $input, condition: $condition) {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppUsers(
+  $input: UpdateAppUsersInput!
+  $condition: ModelAppUsersConditionInput
+) {
+  updateAppUsers(input: $input, condition: $condition) {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppUsers(
+  $input: DeleteAppUsersInput!
+  $condition: ModelAppUsersConditionInput
+) {
+  deleteAppUsers(input: $input, condition: $condition) {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateWorkTime(
+  $input: CreateWorkTimeInput!
+  $condition: ModelWorkTimeConditionInput
+) {
+  createWorkTime(input: $input, condition: $condition) {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateWorkTime(
+  $input: UpdateWorkTimeInput!
+  $condition: ModelWorkTimeConditionInput
+) {
+  updateWorkTime(input: $input, condition: $condition) {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteWorkTime(
+  $input: DeleteWorkTimeInput!
+  $condition: ModelWorkTimeConditionInput
+) {
+  deleteWorkTime(input: $input, condition: $condition) {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateContacts(
+  $input: CreateContactsInput!
+  $condition: ModelcontactsConditionInput
+) {
+  createContacts(input: $input, condition: $condition) {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateContacts(
+  $input: UpdateContactsInput!
+  $condition: ModelcontactsConditionInput
+) {
+  updateContacts(input: $input, condition: $condition) {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteContacts(
+  $input: DeleteContactsInput!
+  $condition: ModelcontactsConditionInput
+) {
+  deleteContacts(input: $input, condition: $condition) {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateFaq(
+  $input: CreateFaqInput!
+  $condition: ModelFaqConditionInput
+) {
+  createFaq(input: $input, condition: $condition) {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateFaq(
+  $input: UpdateFaqInput!
+  $condition: ModelFaqConditionInput
+) {
+  updateFaq(input: $input, condition: $condition) {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteFaq(
+  $input: DeleteFaqInput!
+  $condition: ModelFaqConditionInput
+) {
+  deleteFaq(input: $input, condition: $condition) {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBranchUsers(
+  $input: CreateBranchUsersInput!
+  $condition: ModelBranchUsersConditionInput
+) {
+  createBranchUsers(input: $input, condition: $condition) {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBranchUsers(
+  $input: UpdateBranchUsersInput!
+  $condition: ModelBranchUsersConditionInput
+) {
+  updateBranchUsers(input: $input, condition: $condition) {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBranchUsers(
+  $input: DeleteBranchUsersInput!
+  $condition: ModelBranchUsersConditionInput
+) {
+  deleteBranchUsers(input: $input, condition: $condition) {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUserNotes(
+  $input: CreateUserNotesInput!
+  $condition: ModelUserNotesConditionInput
+) {
+  createUserNotes(input: $input, condition: $condition) {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUserNotes(
+  $input: UpdateUserNotesInput!
+  $condition: ModelUserNotesConditionInput
+) {
+  updateUserNotes(input: $input, condition: $condition) {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUserNotes(
+  $input: DeleteUserNotesInput!
+  $condition: ModelUserNotesConditionInput
+) {
+  deleteUserNotes(input: $input, condition: $condition) {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppointmentNotes(
+  $input: CreateAppointmentNotesInput!
+  $condition: ModelAppointmentNotesConditionInput
+) {
+  createAppointmentNotes(input: $input, condition: $condition) {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppointmentNotes(
+  $input: UpdateAppointmentNotesInput!
+  $condition: ModelAppointmentNotesConditionInput
+) {
+  updateAppointmentNotes(input: $input, condition: $condition) {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppointmentNotes(
+  $input: DeleteAppointmentNotesInput!
+  $condition: ModelAppointmentNotesConditionInput
+) {
+  deleteAppointmentNotes(input: $input, condition: $condition) {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateCustomerPro(
+  $input: CreateCustomerProInput!
+  $condition: ModelCustomerProConditionInput
+) {
+  createCustomerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCustomerPro(
+  $input: UpdateCustomerProInput!
+  $condition: ModelCustomerProConditionInput
+) {
+  updateCustomerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCustomerPro(
+  $input: DeleteCustomerProInput!
+  $condition: ModelCustomerProConditionInput
+) {
+  deleteCustomerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateOwnerPro(
+  $input: CreateOwnerProInput!
+  $condition: ModelOwnerProConditionInput
+) {
+  createOwnerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateOwnerPro(
+  $input: UpdateOwnerProInput!
+  $condition: ModelOwnerProConditionInput
+) {
+  updateOwnerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteOwnerPro(
+  $input: DeleteOwnerProInput!
+  $condition: ModelOwnerProConditionInput
+) {
+  deleteOwnerPro(input: $input, condition: $condition) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppPro(
+  $input: CreateAppProInput!
+  $condition: ModelAppProConditionInput
+) {
+  createAppPro(input: $input, condition: $condition) {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppPro(
+  $input: UpdateAppProInput!
+  $condition: ModelAppProConditionInput
+) {
+  updateAppPro(input: $input, condition: $condition) {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppPro(
+  $input: DeleteAppProInput!
+  $condition: ModelAppProConditionInput
+) {
+  deleteAppPro(input: $input, condition: $condition) {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateAppointmentPro(
+  $input: CreateAppointmentProInput!
+  $condition: ModelAppointmentProConditionInput
+) {
+  createAppointmentPro(input: $input, condition: $condition) {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateAppointmentPro(
+  $input: UpdateAppointmentProInput!
+  $condition: ModelAppointmentProConditionInput
+) {
+  updateAppointmentPro(input: $input, condition: $condition) {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteAppointmentPro(
+  $input: DeleteAppointmentProInput!
+  $condition: ModelAppointmentProConditionInput
+) {
+  deleteAppointmentPro(input: $input, condition: $condition) {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateServicePro(
+  $input: CreateServiceProInput!
+  $condition: ModelServiceProConditionInput
+) {
+  createServicePro(input: $input, condition: $condition) {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateServicePro(
+  $input: UpdateServiceProInput!
+  $condition: ModelServiceProConditionInput
+) {
+  updateServicePro(input: $input, condition: $condition) {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteServicePro(
+  $input: DeleteServiceProInput!
+  $condition: ModelServiceProConditionInput
+) {
+  deleteServicePro(input: $input, condition: $condition) {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateBranchPro(
+  $input: CreateBranchProInput!
+  $condition: ModelBranchProConditionInput
+) {
+  createBranchPro(input: $input, condition: $condition) {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateBranchPro(
+  $input: UpdateBranchProInput!
+  $condition: ModelBranchProConditionInput
+) {
+  updateBranchPro(input: $input, condition: $condition) {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteBranchPro(
+  $input: DeleteBranchProInput!
+  $condition: ModelBranchProConditionInput
+) {
+  deleteBranchPro(input: $input, condition: $condition) {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateShopPro(
+  $input: CreateShopProInput!
+  $condition: ModelShopProConditionInput
+) {
+  createShopPro(input: $input, condition: $condition) {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateShopPro(
+  $input: UpdateShopProInput!
+  $condition: ModelShopProConditionInput
+) {
+  updateShopPro(input: $input, condition: $condition) {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteShopPro(
+  $input: DeleteShopProInput!
+  $condition: ModelShopProConditionInput
+) {
+  deleteShopPro(input: $input, condition: $condition) {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateStyle(
+  $input: CreateStyleInput!
+  $condition: ModelStyleConditionInput
+) {
+  createStyle(input: $input, condition: $condition) {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateStyle(
+  $input: UpdateStyleInput!
+  $condition: ModelStyleConditionInput
+) {
+  updateStyle(input: $input, condition: $condition) {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteStyle(
+  $input: DeleteStyleInput!
+  $condition: ModelStyleConditionInput
+) {
+  deleteStyle(input: $input, condition: $condition) {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}

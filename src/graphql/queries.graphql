@@ -1,0 +1,1261 @@
+# this is an auto generated file. This will be overwritten
+query GetApp($id: ID!) {
+  getApp(id: $id) {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+query ListApps($filter: ModelAppFilterInput, $limit: Int, $nextToken: String) {
+  listApps(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetShop($id: ID!) {
+  getShop(id: $id) {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListShops(
+  $filter: ModelShopFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listShops(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppointment($id: ID!) {
+  getAppointment(id: $id) {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+query ListAppointments(
+  $filter: ModelAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAppointments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetBranch($id: ID!) {
+  getBranch(id: $id) {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+query ListBranchs(
+  $filter: ModelBranchFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBranchs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetService($id: ID!) {
+  getService(id: $id) {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListServices(
+  $filter: ModelServiceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listServices(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetWorkTime($id: ID!) {
+  getWorkTime(id: $id) {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+query ListWorkTimes(
+  $filter: ModelWorkTimeFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWorkTimes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetContacts($id: ID!) {
+  getContacts(id: $id) {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListContactss(
+  $filter: ModelcontactsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listContactss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      subject
+      message
+      userId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetFaq($id: ID!) {
+  getFaq(id: $id) {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+query ListFaqs($filter: ModelFaqFilterInput, $limit: Int, $nextToken: String) {
+  listFaqs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      subject
+      description
+      order
+      type
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetUserNotes($id: ID!) {
+  getUserNotes(id: $id) {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListUserNotess(
+  $filter: ModelUserNotesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUserNotess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      desc
+      userId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppointmentNotes($id: ID!) {
+  getAppointmentNotes(id: $id) {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListAppointmentNotess(
+  $filter: ModelAppointmentNotesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAppointmentNotess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      desc
+      appointmentId
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetCustomerPro($id: ID!) {
+  getCustomerPro(id: $id) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListCustomerPros(
+  $filter: ModelCustomerProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCustomerPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetOwnerPro($id: ID!) {
+  getOwnerPro(id: $id) {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListOwnerPros(
+  $filter: ModelOwnerProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listOwnerPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppPro($id: ID!) {
+  getAppPro(id: $id) {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListAppPros(
+  $filter: ModelAppProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAppPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppointmentPro($id: ID!) {
+  getAppointmentPro(id: $id) {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListAppointmentPros(
+  $filter: ModelAppointmentProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAppointmentPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      customerId
+      date
+      start
+      end
+      confirmedData
+      confirmed
+      note
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetServicePro($id: ID!) {
+  getServicePro(id: $id) {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+query ListServicePros(
+  $filter: ModelServiceProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listServicePros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetBranchPro($id: ID!) {
+  getBranchPro(id: $id) {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListBranchPros(
+  $filter: ModelBranchProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBranchPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetShopPro($id: ID!) {
+  getShopPro(id: $id) {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+query ListShopPros(
+  $filter: ModelShopProFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listShopPros(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetStyle($id: ID!) {
+  getStyle(id: $id) {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}
+query ListStyles(
+  $filter: ModelStyleFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStyles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetAppByHumanId(
+  $appHID: String
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelAppFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getAppByHumanId(
+    appHID: $appHID
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query AppointmentByDateStart(
+  $branchId: ID
+  $date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  AppointmentByDateStart(
+    branchId: $branchId
+    date: $date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query AppointmentByBranchDate(
+  $branchId: ID
+  $date: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  AppointmentByBranchDate(
+    branchId: $branchId
+    date: $date
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query AppointmentByStart(
+  $branchId: ID
+  $dateStart: ModelAppointmentByDateStartTimeCompositeKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelAppointmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  AppointmentByStart(
+    branchId: $branchId
+    dateStart: $dateStart
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}

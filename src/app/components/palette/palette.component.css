@@ -1,0 +1,12 @@
+.palette{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  border: 1px solid;
+  display: inline-block;
+
+}
+
+.margin {
+  margin-right: 10px;
+}

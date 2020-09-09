@@ -1,0 +1,55 @@
+img {
+  width: 80%;
+  padding-top: 150px;
+}
+
+h2 {
+  font-family: "Roboto Medium";
+}
+
+h4 {
+  font-family: "Roboto Light";
+  color: var(--medium);
+  width: 70%;
+}
+
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light);
+  margin-left: 5px;
+}
+
+.active{
+  background-color: var(--primary);
+}
+
+a{
+  color: var(--primary);
+  margin-right: 30px;
+}
+
+.footerCircle{
+  position: absolute;
+  bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.footerSkip{
+  position: absolute;
+  bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: right;
+}
+
+
+
+

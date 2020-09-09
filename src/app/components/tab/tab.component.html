@@ -1,0 +1,20 @@
+<div class="box">
+  <div class="left1" align="center"  (click)="active != 'home' && routeTo('home')">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" [ngClass]="active == 'home'? 'dark': null" >home</mat-icon>
+  </div>
+  <div class="left2" align="center"  (click)="active != 'requests' && routeTo('requests')">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" style="margin-right: 40px;"  [ngClass]="active == 'requests'? 'dark': null">group</mat-icon>
+  </div>
+
+  <div align="center" class="preview" (click)="active != 'preview' && routeToPreview()">
+    <mat-icon style="color:white" aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
+  </div>
+
+  <div class="right1" align="center" (click)="active != 'analytics' && routeTo('analytics')">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" style="margin-left: 40px;" [ngClass]="active == 'analytics'? 'dark': null">show_chart</mat-icon>
+  </div>
+  <div class="right2" align="center" (click)="active != 'settings' && routeTo('settings')">
+    <mat-icon aria-hidden="false" aria-label="Example home icon"  [ngClass]="active == 'settings'? 'dark': null">settings</mat-icon>
+  </div>
+
+</div>

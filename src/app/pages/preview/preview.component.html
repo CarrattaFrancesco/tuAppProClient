@@ -1,0 +1,48 @@
+<!--
+<div class="header" *ngIf="isSetHeader">
+  <app-header [backgroundColor]="headerBackgroundColor" [borderRadius]="headerBorderRadius" [textColor]="textColor"></app-header>
+</div> -->
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+  <mat-toolbar [ngStyle]="{'background-color': headerBackgroundColor? headerBackgroundColor: 'rgba(0,0,0,0)', 'border-radius':headerBorderRadius, 'color': headerBackgroundColor? this.palette.contrastColor[0]: 'black'}" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()" *ngIf="isSideNavbar"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name">{{activePage}}</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list  >
+
+          <a mat-list-item *ngFor="let nav of fillerNav" (click)="activePage = nav.title ; snav.toggle()">{{nav.title}}
+          </a>
+
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      <!-- LISTA DI TUTTE LE POSSIBILI PAGINE -->
+      <app-shop-services *ngIf="activePage == 'Pubblicazione servizi'" [palette]="palette"></app-shop-services>
+      <app-shop-appointments *ngIf="activePage == 'Gestione Appuntamenti'"></app-shop-appointments>
+      <app-shop-products *ngIf="activePage == 'Vendita Prodotti'"></app-shop-products>
+
+
+
+
+      <div class="box" *ngIf="isBottomTabMenu" [ngStyle]="{'box-shadow': '0px 0px 78px -11px ' + primary}">
+        <div class="row">
+          <mat-icon aria-hidden="false" class="icon" (click)="activePage = nav.title ;" *ngFor="let nav of fillerNav" [ngClass]="activePage == nav.title? 'dark': null" >{{nav.icon}}</mat-icon>
+          <mat-icon aria-hidden="false" class="icon" (click)="activePage = 'account' ;" [ngClass]="activePage == 'account'? 'dark': null" >person</mat-icon>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+
+
+

@@ -1,0 +1,2419 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateApp {
+  onCreateApp {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateApp {
+  onUpdateApp {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteApp {
+  onDeleteApp {
+    id
+    appHID
+    appname
+    logoapp
+    splashscreen
+    created_at
+    updated_at
+    shop {
+      id
+      appHID
+      createdAt
+      updatedAt
+    }
+    users {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    appLink
+    defaultBranchId
+    colors
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateShop {
+  onCreateShop {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateShop {
+  onUpdateShop {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteShop {
+  onDeleteShop {
+    id
+    appHID
+    app {
+      nextToken
+    }
+    branches {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppointment {
+  onCreateAppointment {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppointment {
+  onUpdateAppointment {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppointment {
+  onDeleteAppointment {
+    id
+    appId
+    bookedBy
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    branchId
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    end
+    start
+    date
+    price
+    cancelled
+    serviceId
+    service {
+      id
+      title
+      description
+      price
+      duration
+      branchId
+      deleted
+      deletedAt
+      createdAt
+      updatedAt
+    }
+    userName
+    type
+    notificationId
+    canncelledBy
+    note
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateUser {
+  onCreateUser {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUser {
+  onUpdateUser {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUser {
+  onDeleteUser {
+    id
+    username
+    branchID
+    ShopID
+    appointments {
+      nextToken
+    }
+    Branchs {
+      nextToken
+    }
+    operateInBranchId
+    role
+    app {
+      nextToken
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    nome
+    cognome
+    fb
+    birthDate
+    email
+    cell
+    userName
+    logo {
+      bucket
+      region
+      key
+    }
+    device_id
+    blocked
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBranch {
+  onCreateBranch {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBranch {
+  onUpdateBranch {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBranch {
+  onDeleteBranch {
+    id
+    name
+    logo {
+      bucket
+      region
+      key
+    }
+    shopId
+    cell
+    linkFb
+    linkIn
+    linkTw
+    address
+    address_id
+    phone
+    services {
+      nextToken
+    }
+    operators {
+      nextToken
+    }
+    users {
+      nextToken
+    }
+    admin {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    workTime {
+      nextToken
+    }
+    appointments {
+      nextToken
+    }
+    active
+    workCategory
+    addressId
+    regioneSociale
+    pIva
+    sedeLegale
+    sedeLegale_id
+    description
+    sede23
+    Nuovo
+    site
+    adminId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateService {
+  onCreateService {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateService {
+  onUpdateService {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteService {
+  onDeleteService {
+    id
+    title
+    description
+    price
+    image {
+      bucket
+      region
+      key
+    }
+    operator {
+      nextToken
+    }
+    duration
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    appointments {
+      nextToken
+    }
+    deleted
+    deletedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppUsers {
+  onCreateAppUsers {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppUsers {
+  onUpdateAppUsers {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppUsers {
+  onDeleteAppUsers {
+    id
+    appId
+    app {
+      id
+      appHID
+      appname
+      logoapp
+      splashscreen
+      created_at
+      updated_at
+      appLink
+      defaultBranchId
+      colors
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateWorkTime {
+  onCreateWorkTime {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateWorkTime {
+  onUpdateWorkTime {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteWorkTime {
+  onDeleteWorkTime {
+    id
+    start
+    end
+    offset
+    active
+    dayWeek
+    default
+    title
+    branchId
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateContacts {
+  onCreateContacts {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateContacts {
+  onUpdateContacts {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteContacts {
+  onDeleteContacts {
+    id
+    subject
+    message
+    userId
+    img {
+      bucket
+      region
+      key
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateFaq {
+  onCreateFaq {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateFaq {
+  onUpdateFaq {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteFaq {
+  onDeleteFaq {
+    id
+    subject
+    description
+    order
+    type
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBranchUsers {
+  onCreateBranchUsers {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBranchUsers {
+  onUpdateBranchUsers {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBranchUsers {
+  onDeleteBranchUsers {
+    id
+    branchId
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateUserNotes {
+  onCreateUserNotes {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUserNotes {
+  onUpdateUserNotes {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUserNotes {
+  onDeleteUserNotes {
+    id
+    desc
+    userId
+    user {
+      id
+      username
+      branchID
+      ShopID
+      operateInBranchId
+      role
+      nome
+      cognome
+      fb
+      birthDate
+      email
+      cell
+      userName
+      device_id
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppointmentNotes {
+  onCreateAppointmentNotes {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppointmentNotes {
+  onUpdateAppointmentNotes {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppointmentNotes {
+  onDeleteAppointmentNotes {
+    id
+    desc
+    appointmentId
+    appointment {
+      id
+      appId
+      bookedBy
+      branchId
+      userId
+      end
+      start
+      date
+      price
+      cancelled
+      serviceId
+      userName
+      type
+      notificationId
+      canncelledBy
+      note
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateCustomerPro {
+  onCreateCustomerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateCustomerPro {
+  onUpdateCustomerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteCustomerPro {
+  onDeleteCustomerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    logo {
+      bucket
+      region
+      key
+    }
+    blocked
+    appointments {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateOwnerPro {
+  onCreateOwnerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateOwnerPro {
+  onUpdateOwnerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteOwnerPro {
+  onDeleteOwnerPro {
+    id
+    username
+    nome
+    cognome
+    fb
+    email
+    cell
+    blocked
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppPro {
+  onCreateAppPro {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppPro {
+  onUpdateAppPro {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppPro {
+  onDeleteAppPro {
+    id
+    active
+    logo {
+      bucket
+      region
+      key
+    }
+    name
+    description
+    SplashScreen {
+      bucket
+      region
+      key
+    }
+    link
+    CreatedAt
+    UpdateAt
+    type
+    style {
+      id
+      palette
+      headers
+      tab
+      pages
+      menu
+      createdAt
+      updatedAt
+    }
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateAppointmentPro {
+  onCreateAppointmentPro {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateAppointmentPro {
+  onUpdateAppointmentPro {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteAppointmentPro {
+  onDeleteAppointmentPro {
+    id
+    customerId
+    date
+    start
+    end
+    confirmedData
+    confirmed
+    note
+    services {
+      id
+      branch_id
+      title
+      Description
+      Image
+      Deleted
+      Deleted_at
+      duration
+      price
+      createdAt
+      updatedAt
+    }
+    branch {
+      id
+      name
+      shopId
+      cell
+      linkFb
+      linkIn
+      linkTw
+      address
+      address_id
+      phone
+      active
+      workCategory
+      addressId
+      regioneSociale
+      pIva
+      sedeLegale
+      sedeLegale_id
+      description
+      sede23
+      Nuovo
+      site
+      adminId
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateServicePro {
+  onCreateServicePro {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateServicePro {
+  onUpdateServicePro {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteServicePro {
+  onDeleteServicePro {
+    id
+    branch_id
+    branch {
+      id
+      phone
+      Active
+      linkFB
+      linkIG
+      linkTW
+      workCategory
+      address
+      address_id
+      createdAt
+      updatedAt
+    }
+    title
+    Description
+    Image
+    Deleted
+    Deleted_at
+    duration
+    price
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateBranchPro {
+  onCreateBranchPro {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateBranchPro {
+  onUpdateBranchPro {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteBranchPro {
+  onDeleteBranchPro {
+    id
+    shop {
+      id
+      name
+      description
+      pIva
+      ragioneSociale
+      sedeLegale
+      sedeLegale_id
+      website
+      createdAt
+      updatedAt
+    }
+    phone
+    Active
+    linkFB
+    linkIG
+    linkTW
+    workTime {
+      id
+      start
+      end
+      offset
+      active
+      dayWeek
+      default
+      title
+      branchId
+      createdAt
+      updatedAt
+    }
+    workCategory
+    address
+    address_id
+    services {
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateShopPro {
+  onCreateShopPro {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateShopPro {
+  onUpdateShopPro {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteShopPro {
+  onDeleteShopPro {
+    id
+    name
+    description
+    logo {
+      bucket
+      region
+      key
+    }
+    pIva
+    ragioneSociale
+    sedeLegale
+    sedeLegale_id
+    website
+    branchs {
+      nextToken
+    }
+    owner {
+      id
+      username
+      nome
+      cognome
+      fb
+      email
+      cell
+      blocked
+      createdAt
+      updatedAt
+    }
+    app {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateStyle {
+  onCreateStyle {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateStyle {
+  onUpdateStyle {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteStyle {
+  onDeleteStyle {
+    id
+    appPro {
+      id
+      active
+      name
+      description
+      link
+      CreatedAt
+      UpdateAt
+      type
+      createdAt
+      updatedAt
+    }
+    palette
+    headers
+    tab
+    pages
+    menu
+    createdAt
+    updatedAt
+  }
+}

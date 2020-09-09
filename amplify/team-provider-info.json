@@ -1,0 +1,26 @@
+{
+    "frontend": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-bookingapp-frontend-120133-authRole",
+            "UnauthRoleArn": "arn:aws:iam::532020104636:role/amplify-bookingapp-frontend-120133-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::532020104636:role/amplify-bookingapp-frontend-120133-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-bookingapp-frontend-120133-deployment",
+            "UnauthRoleName": "amplify-bookingapp-frontend-120133-unauthRole",
+            "StackName": "amplify-bookingapp-frontend-120133",
+            "StackId": "arn:aws:cloudformation:eu-central-1:532020104636:stack/amplify-bookingapp-frontend-120133/505ae8d0-d570-11ea-a66a-0a69def5f2ec",
+            "AmplifyAppId": "d3c8sub1zqsujj"
+        },
+        "categories": {
+            "auth": {
+                "bookingapp8d9919eb": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3c8sub1zqsujj",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}

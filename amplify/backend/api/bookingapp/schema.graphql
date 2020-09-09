@@ -1,0 +1,350 @@
+type App @model
+@key(name:"appHID", fields: ["appHID","id"], queryField: "getAppByHumanId")
+{
+  id: ID!
+  appHID:String!
+  appname: String!
+  logoapp: String!
+  splashscreen: String!
+  created_at: AWSTimestamp
+  updated_at: AWSTimestamp
+  shop:Shop
+  users:[AppUsers] @connection(keyName:"byApp",fields:["id"])
+  appointments: [Appointment] @connection(keyName:"byApp",fields:["id"])
+  appLink:String
+  defaultBranchId:String
+  colors:String
+}
+
+
+
+type Shop @model
+{
+  id:ID!
+  appHID:Int
+  app:[App] @connection
+  branches:[Branch] @connection(keyName:"byShop",fields:["id"])
+}
+
+
+type Appointment @model
+@key(name:"byApp",fields:["appId","id"])
+@key(name:"byBranch",fields:["branchId","id"])
+@key(name:"byService",fields:["serviceId","id"])
+@key(name: "ByDateStart",fields: ["branchId","date"],queryField:"AppointmentByDateStart")
+@key(name: "byBranchDate",fields: ["branchId","date"],queryField:"AppointmentByBranchDate")
+@key(name: "byDateStartTime",fields: ["branchId","date","start"],queryField:"AppointmentByStart")
+@key(name:"appointmentByUser",fields:["userId","id"])
+{
+  id: ID!
+  appId:ID!
+  bookedBy:String
+  branch: Branch @connection(fields:["branchId"])
+  branchId: ID!
+  userId:ID!
+  user:User @connection(fields:["userId"])
+  end: AWSTime
+  start: AWSTime!
+  date: AWSDate!
+  price: Float
+  cancelled: Boolean
+  serviceId:ID!
+  service:Service @connection(fields:["serviceId"])
+  userName:String
+  type:AppointmentType
+  notificationId:String
+  canncelledBy:ID
+  note:String
+}
+
+
+type User @model
+@key(name:"operatorsByBranch",fields:["operateInBranchId"])
+@key(name:"byBranch",fields:["branchID","id"])
+{
+  id: ID! # cognito.identity.sub
+  username: String
+  branchID:ID
+  ShopID:ID
+  appointments:[Appointment] @connection(keyName:"appointmentByUser",fields:["id"])
+  Branchs:[BranchUsers] @connection(keyName:"byFavouriteUser",fields:["id"])
+  operateInBranchId: ID
+  role: Role!
+  app: [AppUsers] @connection(keyName:"ByUser",fields:["id"])
+  branch:Branch @connection(fields: ["id"])
+  nome:String
+  cognome: String
+  fb:String
+  birthDate:AWSDate
+  email:String
+  cell:String
+  userName:String
+  logo:S3Object
+  device_id:String
+  blocked:Boolean
+}
+
+type Branch @model
+@key(name:"byShop",fields:["shopId"])
+{
+  id:ID!
+  name:String
+  logo:S3Object
+  shopId: ID!
+  cell:String
+  linkFb:String
+  linkIn:String
+  linkTw:String
+  address:String
+  address_id:String
+  phone:String
+  services:[Service] @connection(keyName:"byBranch",fields:["id"])
+  operators:[User] @connection(fields:["id"])
+  users:[BranchUsers] @connection(keyName:"byFavouriteBranch",fields:["id"])
+  admin:User  @connection(fields:["adminId"])
+  workTime:[WorkTime] @connection(keyName:"byBranch",fields:["id"])
+  appointments:[Appointment] @connection(keyName:"byBranch",fields:["id"])
+  active:Boolean
+  workCategory:String
+  addressId:String
+  regioneSociale: String
+  pIva:String
+  sedeLegale:String
+  sedeLegale_id:String
+  description:String
+  sede23:String
+  Nuovo:Int
+  site:String
+  adminId:ID!
+}
+
+
+type Service @model
+@key(name:"byBranch",fields:["branchId"])
+{
+  id: ID!
+  title: String!
+  description: String
+  price: Float
+  image: S3Object
+  operator:[User!] @connection
+  duration: AWSTime!
+  branchId:ID!,
+  branch:Branch @connection(fields:["branchId"])
+  appointments: [Appointment]  @connection(keyName:"byService",fields:["id"])
+  deleted:Boolean
+  deletedAt:AWSDateTime
+}
+
+type S3Object {
+  bucket: String
+  region: String
+  key: String
+}
+
+type AppUsers @model
+(queries: null)
+@key(name: "byApp", fields: ["appId", "userId"])
+@key(name: "ByUser", fields: ["userId", "appId"])
+{
+  id:ID!
+  appId:ID!
+  app: App! @connection(fields:["appId"])
+  userId:ID!
+  user:User! @connection(fields:["userId"])
+}
+
+
+
+
+
+type WorkTime @model
+@key(name:"byBranch",fields:["branchId"])
+{
+  id: ID!
+  start: AWSTime!
+  end: AWSTime!
+  offset: AWSTime!
+  active: Boolean
+  dayWeek:DayNumberOfWeek
+  default:Boolean
+  title:String
+  branchId:ID!
+}
+
+type contacts @model{
+  id:ID!
+  subject:String,
+  message:String,
+  userId:ID!
+  img:S3Object
+}
+
+type Faq @model{
+  id:ID!
+  subject:String
+  description:String
+  order:Int
+  type:FaqType
+}
+
+
+type BranchUsers @model
+(queries: null)
+@key(name: "byFavouriteBranch", fields: ["branchId", "userId"])
+@key(name: "byFavouriteUser", fields: ["userId", "branchId"])
+{
+  id:ID!
+  branchId:ID!
+  branch: Branch! @connection(fields:["branchId"])
+  userId:ID!
+  user:User! @connection(fields:["userId"])
+}
+
+type UserNotes @model
+@key(name:"noteByUser",fields:["userId","id"])
+{
+  id:ID!
+  desc:String
+  userId: ID!
+  user: User @connection(fields:["userId"])
+}
+type AppointmentNotes @model
+@key(name:"noteByAppointment",fields:["appointmentId","id"])
+{
+  id:ID!
+  desc:String
+  appointmentId:ID!
+  appointment: Appointment @connection(fields:["appointmentId"])
+}
+enum Role{ User,Parruchiere,Admin,None }
+enum DayNumberOfWeek{Lun,Mar,Mer,Gio,Ven,Sab,Dom}
+enum AppointmentType{Appointment,Block}
+enum FaqType{All,Admin,User,Parruchiere}
+
+
+#---------------------------------------------------------------
+
+
+type CustomerPro  @model{
+  id: ID!
+  username: String!
+  nome: String!
+  cognome: String!
+  fb: String
+  email: String!
+  cell: String
+  logo: S3Object
+  blocked: Boolean
+  appointments: [AppointmentPro]  @connection(keyName: "byCustomer", fields: ["id"])
+}
+
+type OwnerPro @model{
+  id: ID!
+  username: String
+  nome: String!
+  cognome: String!
+  fb: String
+  email: String!
+  cell: String
+  blocked: Boolean
+  #customers: [CustomerPro]  @connection(keyName: "byOwnerShop", fields: ["id"])
+  app: AppPro @connection(name: "OwnerApp")
+  shop: ShopPro @connection(name: "OwnerBranch")
+}
+
+type AppPro @model {
+  id:ID!
+  active: Boolean,
+  logo: S3Object
+  name: String
+  description: String!
+  SplashScreen: [S3Object]
+  link: String
+  CreatedAt: AWSTime
+  UpdateAt: AWSTime
+  type: AppType
+  style: Style @connection(name: "AppStyle")
+  shop: ShopPro @connection(name: "AppShop")
+  owner: OwnerPro @connection(name: "OwnerApp")
+}
+
+enum AppType {PWA,Native}
+
+type AppointmentPro @model
+@key(name: "byCustomer", fields: ["customerId", "id"]){
+  id: ID!
+  customerId: ID!
+  date: AWSDate!
+  start: AWSTime!
+  end: AWSTime!
+  confirmedData: AWSDate
+  confirmed: Boolean
+  note: String
+  services: ServicePro @connection
+  branch : Branch @connection
+}
+
+type ServicePro @model{
+  id: ID!
+  branch_id: ID!
+  branch: BranchPro @connection(name: "branchService")
+  title: String!
+  Description: String
+  Image: String
+  Deleted: Boolean
+  Deleted_at: AWSTime
+  duration: Int
+  price: Float
+}
+
+type BranchPro @model
+{
+  id: ID!
+  shop : ShopPro @connection(name: "ShopBranch")
+  phone: String!
+  Active: Boolean
+  linkFB: String
+  linkIG: String
+  linkTW: String
+  workTime: WorkTime @connection
+  workCategory: String
+  address:String
+  address_id:String
+  services : [ServicePro] @connection(name: "branchService")
+}
+
+type ShopPro @model
+{
+  id: ID!
+  name: String!
+  description: String
+  logo: S3Object
+  pIva: String
+  ragioneSociale: String
+  sedeLegale: String
+  sedeLegale_id: String
+  website: String
+  branchs: [BranchPro] @connection(name: "ShopBranch")
+  owner: OwnerPro @connection(name: "OwnerBranch")
+  app: AppPro @connection(name: "AppShop")
+}
+
+
+
+
+type Style @model
+{
+  id:ID!
+  appPro: AppPro @connection(name: "AppStyle")
+  palette: String
+  headers: String
+  tab: String
+  pages: [String]
+  menu: String
+}
+
+# todo collegare i customer agli owner
+# todo creare i faq
+
+

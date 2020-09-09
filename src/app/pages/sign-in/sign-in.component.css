@@ -1,0 +1,9 @@
+.h1Title{
+  margin-top: 150px;
+  margin-left: 30px;
+}
+
+.subTitle{
+  font-family: 'Roboto Light';
+  color: var(--dark);
+}

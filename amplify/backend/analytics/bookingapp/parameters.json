@@ -1,0 +1,21 @@
+{
+    "appName": "bookingapp",
+    "roleName": "pinpointLambdaRolec6cdc0d2",
+    "cloudformationPolicyName": "cloudformationPolicyc6cdc0d2",
+    "cloudWatchPolicyName": "cloudWatchPolicyc6cdc0d2",
+    "pinpointPolicyName": "pinpointPolicyc6cdc0d2",
+    "authPolicyName": "pinpoint_amplify_c6cdc0d2",
+    "unauthPolicyName": "pinpoint_amplify_c6cdc0d2",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

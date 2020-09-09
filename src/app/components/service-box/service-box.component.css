@@ -1,0 +1,48 @@
+.borderImage {
+  color: var(--dark);
+  text-align: left;
+  margin-top: 15px;
+
+  padding-left: 15px;
+  width: 90%;
+  border-radius:20px;
+  border: 1px solid var(--primary);
+  background-color: white;
+}
+
+.padding{
+  padding-right: 100px;
+}
+
+.modify{
+  color: var(--medium);
+  background: var(--secondary);
+  border-radius: 20px;
+  width: 70px;
+  padding: 5px;
+  border: 1px solid var(--secondary-shade);
+}
+
+.delete{
+  color: white;
+  background: var(--danger);
+  border-radius: 20px;
+  width: 70px;
+  padding: 5px;
+  border: 1px solid var(--danger-shade);
+}
+
+.booking{
+  color: var(--medium);
+  border-radius: 20px;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid;
+  filter: ;
+}
+
+.noService{
+  margin-top: 200px;
+  text-align: center;
+  padding: 0px 20px;
+}

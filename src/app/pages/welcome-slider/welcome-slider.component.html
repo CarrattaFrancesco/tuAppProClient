@@ -1,0 +1,19 @@
+<div (click)="nextSlide()" [@simpleFadeAnimation]="fadeAnimation? 'fadeIn':'fadeOut'">
+  <div align="center">
+    <img id="imgSrc" src="assets/imgs/{{slide[index].imgSrc}}" class="HorizontalCenter">
+    <h2 id="title">{{slide[index].title}}</h2>
+    <h4 id="description">{{slide[index].description}}</h4>
+  </div>
+
+  <div class="footerCircle">
+    <div class="inlineParent">
+      <div id="circle1" class="inline circle active"></div>
+      <div id="circle2" class="inline circle "></div>
+      <div id="circle3"  class="inline circle "></div>
+    </div>
+  </div>
+</div>
+
+<div align="right" class="footerSkip">
+  <a id="skip" (click)="finish()">skip</a>
+</div>

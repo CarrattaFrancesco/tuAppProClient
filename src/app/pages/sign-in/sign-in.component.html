@@ -1,0 +1,18 @@
+<div>
+  <h2 class="h1Title">
+    <strong>Benvenuto,</strong><br> <div class="subTitle">registrati per continuare.</div>
+  </h2>
+</div>
+
+<div align="center">
+  <amplify-authenticator *ngIf="authState !== 'signedin'">
+    <amplify-sign-in  errorMessage="test" header-text="" submitButtonText="ACCEDI" slot="sign-in" usernameAlias="email" [formFields]="signinAuth">
+
+    </amplify-sign-in>
+    <amplify-sign-up errorMessage="test" headerText="Registrati su TuAppPro" usernameAlias="email" submitButtonText="Registrati"
+                     slot="sign-up" [formFields]="formFields">
+    </amplify-sign-up>
+  </amplify-authenticator>
+
+</div>
+

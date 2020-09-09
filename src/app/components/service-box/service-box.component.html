@@ -1,0 +1,19 @@
+
+<p class="noService" *ngIf="services.length == 0"> Mi dispiace ma non è presente ancora nessun servizio.</p>
+
+<div align="center" *ngFor="let s of services">
+  <button class="borderImage" [ngStyle]="{background : 'url(\'assets/imgs/servicesPhoto/'+s.Image+'\') #ffffff 150px center / auto 200px no-repeat', borderColor : palette? palette.colors[1] : 'var(--primary)'}">
+    <h2>{{s.title | titlecase}} </h2>
+    <p class="padding">{{s.Description}}</p>
+    <p> <strong>Durata</strong> {{s.duration}} min</p>
+    <h1 style="color: {{colorPrice}};"> {{s.price}} €</h1>
+  </button>
+  <div style="margin-top: -20px;">
+
+    <div align="center" class="inline" *ngIf="!isOwner">
+      <button class="booking" (click)="prenota(s.id)" [ngStyle]="{background: palette? palette.colors[2] : null,borderColor: palette? palette.invers[2]: null}">
+        <div [ngStyle]="{color: palette? palette.contrastColor[2] : null}" >Prenota</div>
+      </button>
+    </div>
+  </div>
+</div>

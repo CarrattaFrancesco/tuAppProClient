@@ -1,0 +1,44 @@
+
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <div class="card" >
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Nome</mat-label>
+          <input matInput name="nome" formControlName="nome">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Descrizione</mat-label>
+          <textarea matInput name="descrizione"  formControlName="descrizione" rows="5"></textarea>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Costo</mat-label>
+          <input matInput type="number" class="example-right-align" name="costo"  formControlName="costo">
+          <span matPrefix>€&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Durata</mat-label>
+          <input matInput type="number" class="example-right-align" name="durata"  formControlName="durata">
+          <span matSuffix>&nbsp;min</span>
+        </mat-form-field>
+      </p>
+
+    </div>
+    <div align="center">
+      <button type="submit" class="submit" >Conferma</button>
+    </div>
+  </mat-dialog-content>
+
+</form><!-- Form ends -->
+

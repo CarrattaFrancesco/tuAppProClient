@@ -1,0 +1,153 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+.HorizontalCenter{
+  width: 70%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pTop200{
+  padding-top: 200px;
+}
+
+.inline{
+  display: inline-block;
+}
+
+.inlineParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Palette colors */
+
+:root{
+  --dark:#707070;
+  --medium: #8E8E8E;
+  --light : #e2e2e2;
+  --primary: #FBB796;
+  --primary-shade: #ff8e56;
+  --primary-light: #fffaf8;
+  --secondary: #FFE7A7;
+  --secondary-shade: #fdd864;
+  --success: #A6FF8C;
+  --success-shade :#8BD492;
+  --danger: #F9968B;
+  --danger-shade: #F7654F;
+
+  font-family: Roboto;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.successNotification{
+  background:  var(--success);
+  color: black;
+}
+
+.dangerNotification{
+  background: var(--danger-shade);
+  color: white;
+}
+
+.backLeft{
+  margin: 20px 0px 0px 20px;
+  height: 25px;
+}
+
+.backRight{
+  margin: 20px 20px 0px 0px;
+  height: 25px;
+}
+
+.previewText{
+  display: inline-block;
+  margin: 0;
+}
+
+.disabled{
+  opacity: 0.5;
+}
+
+.submit{
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  width: 70%;
+  border-radius:20px;
+  background: linear-gradient(#FFE7A7,#FBB796);
+  border: 0px;
+  box-shadow: 0px 5px 15px -4px rgba(0,0,0,0.5);
+  position: fixed;
+  bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.width50{
+  width: 50%;
+}
+
+.inline{
+  display: inline-block;
+}
+
+.width25{
+  width: 25%;
+}
+
+.width75{
+  width: 75%;
+}
+
+.card{
+  background-color: white;
+  padding: 15px;
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  border-width : 0px 0px 1px 0px;
+  border-color: var(--medium);
+  font-family: "Roboto";
+  color: var(--medium);
+  transition: border-color 0.1s ease, border-width 0.1s ease;
+  font-size: 15px;
+}
+
+input:focus,textarea:focus, select:focus{
+  border-color: var(--primary);
+  outline: none;
+}
+
+select {
+  border-width : 0px 0px 1px 0px;
+  transition: border-color 0.1s ease, border-width 0.1s ease;
+  width: 100%;
+  color: var(--medium);
+  font-size: 15px;
+  padding-bottom: 5px;
+  font-family: "Roboto";
+}
+
+option{
+  color: var(--medium);
+  font-family: "Roboto";
+  font-size: 15px;
+
+}
+
+option:active{
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
